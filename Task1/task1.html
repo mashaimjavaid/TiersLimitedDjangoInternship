@@ -1,0 +1,118 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Security</title>
+    <style>
+        body{ 
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* dark gradient */
+            color: white;
+        }
+        
+        .image-container {display: flex; gap: 20px; max-width:100%; margin: 0 auto; padding: 30px; 
+        border-radius: 20px; background: rgba(255, 255, 255, 0.1); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); 
+        color: white; text-align: center; flex-wrap: wrap; justify-content: center;}
+        
+        footer { background-color: #0f2027; color: white; text-align: center; padding: 20px 10px; font-size: 16px; 
+        margin-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.2);font-family: Arial, sans-serif;}
+    </style>
+</head>
+
+<body>
+    <h1 style="color: white; font-family: 'Times New Roman', Times, serif;"><b><center>Information Security</center><b></h1>
+    <p style="color: white; font-size: 20px; font-family: 'Times New Roman', Times, serif; text-align: justify;">Information security refers to the practices and processes designed to protect sensitive data from 
+        unauthorized access, disclosure, alteration, or destruction. Its primary goals are confidentiality, 
+        integrity, and availability, often referred to as the CIA triad. With the rapid growth of digital 
+        data and interconnected systems, ensuring information security has become essential for individuals, 
+        organizations, and governments. This field includes various techniques and tools such as firewalls, 
+        intrusion detection systems, encryption, authentication mechanisms, and access control policies, 
+        all aimed at preventing cyber threats like hacking, phishing, malware, and data breaches.</p>
+    <br>
+
+    <p style="color: white; font-size: 20px; font-family: 'Times New Roman', Times, serif; text-align: justify;">Information security not only involves protecting data from external cyber threats but also from internal 
+        risks such as employee negligence or insider attacks. It encompasses physical security measures like 
+        surveillance and restricted access, as well as digital safeguards such as encryption, multi-factor authentication, 
+        and regular software updates. In today’s environment, where organizations handle vast amounts of 
+        sensitive data including personal information, financial records, and intellectual property 
+        regulatory compliance (such as GDPR, HIPAA, and ISO standards) is also a critical part of information security. 
+        Building a strong security culture within an organization, through employee training and clear policies, 
+        is equally vital to ensure ongoing protection against evolving threats.</p>
+    <br>
+    
+    <div class="image-container">
+        <img src="CIA triad.png" alt="CIA Triad" title="CIA Triad" style="margin-left:30px; margin-right: 50px;" height="500px" width="750px"> 
+        <img src="types.png" alt="Types of Information Security" title="Types of Information Security" height="500px" width="750px">
+    </div>
+    <br>
+
+    <h3 style="color: white; font-family: 'Times New Roman', Times, serif;">Learn More</h3>
+    <ul style="list-style: none; padding: 0;">
+        <li><a href="https://www.geeksforgeeks.org/computer-networks/what-is-information-security/" target="_blank" style="color: #00ffff;">Cisco: What is Cybersecurity?</a></li>
+        <li><a href="https://www.cisco.com/site/us/en/learn/topics/security/what-is-information-security-infosec.html" target="_blank" style="color: #00ffff;">NIST: Cybersecurity Framework</a></li>
+    </ul>
+    <br>
+    
+    <h2 style="color:white; font-family: 'Times New Roman', Times, serif;"><b><center>Difference Between Asymmetric and Symmetric Cryptography</center></b></h2>
+    <br>
+
+    <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%; text-align: left;">
+        <thead>
+            <tr style="color:black; background-color: #f2f2f2;">
+                <th>Feature</th>
+                <th>Symmetric Cryptography</th>
+                <th>Asymmetric Cryptography</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Key Used</td>
+                <td>Same key for encryption and decryption</td>
+                <td>Public key for encryption, private key for decryption</td>
+            </tr>
+            <tr>
+                <td>Speed</td>
+                <td>Faster and efficient</td>
+                <td>Slower due to complex computations</td>
+            </tr>
+            <tr>
+                <td>Security</td>
+                <td>Less secure if key is shared</td>
+                <td>More secure due to separate public/private keys</td>
+            </tr>
+            <tr>
+                <td>Key Sharing</td>
+                <td>Requires secure channel to share key</td>
+                <td>No need to share private key</td>
+            </tr>
+            <tr>
+                <td>Use Case</td>
+                <td>Ideal for encrypting large data</td>
+                <td>Best for secure key exchange and digital signatures</td>
+            </tr>
+            <tr>
+                <td>Algorithm Examples</td>
+                <td>AES, DES, Blowfish</td>
+                <td>RSA, ECC, DSA</td>
+            </tr>
+            <tr>
+                <td>Key Length</td>
+                <td>Usually short (128 or 256 bits)</td>
+                <td>Longer keys (1024, 2048, or more bits)</td>
+            </tr>
+            <tr>
+                <td>Complexity</td>
+                <td>Simple algorithm design</td>
+                <td>More complex mathematical operations</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <footer class="footer">
+        <p>&copy; Tiers Limited Internship Training Task 1 All rights reserved By Mashaim Javaid.</p>
+    </footer>
+
+
+
+</body>
+</html>
