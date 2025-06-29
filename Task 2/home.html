@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="home.css">
+    <title>UIT University</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="uni_logo.png" alt="Logo" width="60" height="60" class="me-2" />
+                <b style="font-family: 'Times New Roman', serif; font-size: 1.8rem;">Usman Institute of Technology University</b>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" style="font-size: 1.3rem;" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" style="font-size: 1.3rem;" href="about_us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" style="font-size: 1.3rem;" href="event.html">Event</a></li>
+                    <li class="nav-item"><a class="nav-link" style="font-size: 1.3rem;" href="blogs.html">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link" style="font-size: 1.3rem;" href="#courses">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" style="font-size: 1.3rem;" href="staff.html">Staff</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="image-container">
+        <img src="uni.jpg" alt="UIT University" />
+        <div class="text-overlay" id="typedText"></div>
+    </div>
+
+    <script>
+        const lines = [
+            "Best Learning Institution",
+            "Welcome to UIT University",
+            "Your future starts here"
+        ];
+
+    const typingElement = document.getElementById('typedText');
+    let lineIndex = 0;
+    let charIndex = 0;
+    let currentLine = '';
+
+    function typeText() {
+        if (lineIndex < lines.length) {
+            currentLine = lines[lineIndex];
+            if (charIndex <= currentLine.length) {
+                typingElement.innerHTML =
+                    lines.slice(0, lineIndex).join('\n') +
+                    (lineIndex > 0 ? '\n' : '') +
+                    `<span class="typing">${currentLine.slice(0, charIndex)}</span>`;
+                charIndex++;
+                setTimeout(typeText, 100);
+            } else {
+                charIndex = 0;
+                lineIndex++;
+                setTimeout(typeText, 500);
+            }
+            } else {
+                typingElement.innerHTML = lines.join('\n');
+            }
+        }
+        window.onload = typeText;
+    </script>
+    <br>
+    
+    <!--Courses Page-->
+    <div id="courses" class="container">
+        <br>
+        <h1 class="text-center my-4"><b>Course Categories</b></h1>
+        <br>
+        <div class="row g-4 justify-content-center">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="course-box d-flex align-items-center" style="background: #f9f9f9; padding: 15px; border-radius: 10px;">
+                    <img src="computer-science-icon.png" alt="Computer Science" title="Icon By FreePik(Flaticon)"
+                        style="height:40px; width:40px; margin-right:15px;">
+                    <div>
+                        <div style="font-size: 18px; font-weight: bold; color: #004466;">BS Computer Science</div>
+                        <p style="font-size: 12px; margin: 0;">Programming, algorithms, and systems for solving real-world computing problems</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="course-box d-flex align-items-center" style="background: #f9f9f9; padding: 15px; border-radius: 10px;">
+                    <img src="artificial-intelligence-icon.png" alt="Artificial Intelligence" title="Icon By winnievinzence(Flaticon)"
+                        style="height:40px; width:40px; margin-right:15px;">
+                    <div>
+                        <div style="font-size: 18px; font-weight: bold; color: #004466;">BS Artificial Intelligence</div>
+                        <p style="font-size: 12px; margin: 0;">Learn AI, machine learning, robotics, and intelligent systems</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="course-box d-flex align-items-center" style="background: #f9f9f9; padding: 15px; border-radius: 10px;">
+                    <img src="software-engineering-icon.png" alt="Software Engineering" title="Icon By Pericon(Flaticon)"
+                        style="height:40px; width:40px; margin-right:15px;">
+                    <div>
+                        <div style="font-size: 18px; font-weight: bold; color: #004466;">BS Software Engineering</div>
+                        <p style="font-size: 12px; margin: 0;"> Design, develop, test, and maintain reliable software systems</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="course-box d-flex align-items-center" style="background: #f9f9f9; padding: 15px; border-radius: 10px;">
+                    <img src="data-science-icon.png" alt="Data Science" title="Icon By  Dighital Design(Flaticon)"
+                        style="height:40px; width:40px; margin-right:15px;">
+                    <div>
+                        <div style="font-size: 18px; font-weight: bold; color: #004466;">BS Data Science</div>
+                        <p style="font-size: 12px; margin: 0;">Analyze data using statistics, machine learning, and programming</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="course-box d-flex align-items-center" style="background: #f9f9f9; padding: 15px; border-radius: 10px;">
+                    <img src="electrical-icon.png" alt="Electrical" title="Icon By Dewi Sari(Flaticon)"
+                        style="height:40px; width:40px; margin-right:15px;">
+                    <div>
+                        <div style="font-size: 18px; font-weight: bold; color: #004466;">BE Electrical</div>
+                        <p style="font-size: 12px; margin: 0;">Study of circuits, electronics, power, and communication technologies</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="course-box d-flex align-items-center" style="background: #f9f9f9; padding: 15px; border-radius: 10px;">
+                    <img src="computer-systems-icon.png" alt="Computer Systems" title="Icon By Eucalyp(Flaticon)"
+                        style="height:40px; width:40px; margin-right:15px;">
+                    <div>
+                        <div style="font-size: 18px; font-weight: bold; color: #004466;">BS Computer Systems</div>
+                        <p style="font-size: 12px; margin: 0;">Focus on hardware, system software, and computer network integration</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    
+    <!--Pricing and Plans-->
+    <div class="container">
+        <br>
+        <h1 class="text-center my-4"><b>Pricing and Plans</b></h1>
+        <br>
+        <div class="row g-4 justify-content-center">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="pricing-box text-center">
+                    <h4><b>Trials</b></h4>
+                    <h5>Free</h5>
+                    <h3 style="color:orange;"><b>30 days</b></h3>
+                    <br>
+                    <div style="line-height: 1.2; font-size:15px;">
+                        Access to 30+ Recorded Lectures<br>
+                        Downloadable Course Materials<br>
+                        Limited Access to Student Forum<br>
+                        Basic Email Support<br>
+                        1 Course Module Included
+                    </div>
+                    <br><br><br>
+                    <h2 style="color:darkblue"><b>SUBSCRIBE NOW</b></h2>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="pricing-box text-center">
+                    <h4><b>Trials</b></h4>
+                    <h5>$149</h5>
+                    <h3 style="color:orange;"><b>30 days</b></h3>
+                    <br>
+                    <div style="line-height: 1.2; font-size:15px;">
+                        Full Access to All Lecture Recordings<br>
+                        Downloadable Notes & Assignments<br>
+                        Interactive Quizzes and Assessments<br>
+                        24/7 Email & Chat Support<br>
+                        Certificate of Completion
+                    </div>
+                    <br><br><br>
+                    <h2 style="color:darkblue"><b>SUBSCRIBE NOW</b></h2>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="pricing-box text-center">
+                    <h4><b>$249</b></h4>
+                    <h5>Free</h5>
+                    <h3 style="color:orange;"><b>30 days</b></h3>
+                    <br>
+                    <div style="line-height: 1.2; font-size:15px;">
+                        Full Access to All Lecture Recordings<br>
+                        Downloadable Notes & Assignments<br>
+                        Interactive Quizzes and Assessments<br>
+                        24/7 Email & Chat Support<br>
+                        Certificate of Completion
+                    </div>
+                    <br><br><br>
+                    <h2 style="color:darkblue"><b>SUBSCRIBE NOW</b></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    
+    <!-- Information and Contact Us Page -->
+    <div class="information-contactUs">
+        <div class="row g-4 justify-content-center">
+            <div style="height:800px; width:370px; padding-left: 40px;">
+                <br><br>
+                <h1><b>INFORMATION</b></h1>
+                <br>
+                <h3>About Us</h3>
+                <h3>Our Stories</h3>
+                <h3>My Account</h3>
+                <h3>Our History</h3>
+                <h3>Our Staff</h3>
+            </div>
+            <div style="height:800px; width:280px; padding-left: 40px;">
+                <br><br>
+                <h1><b>LINKS</b></h1>
+                <br>
+                <h3>Facebook</h3>
+                <h3>Instagram</h3>
+                <h3>Twitter</h3>
+                <h3>Linkedin</h3>
+            </div>
+            
+            <div class="contact-form">
+                <h2>Contact Us</h2>
+                <form action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="Name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="Email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="Message" required></textarea>
+                    </div>
+                        <button type="submit">Send</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+        
+    <footer class="footer">
+        <p>&copy; Tiers Limited Internship Training Task 2 All rights reserved By Mashaim Javaid.</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

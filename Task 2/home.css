@@ -1,0 +1,112 @@
+
+.image-container {position: relative; width: 2000; height: auto;}
+.image-container img {width: 100%; height: auto; display: block;}
+.text-overlay {position: absolute; top: 15%; left: 5%; right: 5%; color: white; font-size: 4vw; font-weight: bold; font-family: 'Segoe UI', sans-serif; text-shadow: 2px 2px 6px #000; white-space: pre-wrap;}
+.typing {border-right: 2px solid #fff; animation: blink 0.7s infinite;}
+@keyframes blink {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: white; }
+}
+/* Responsive text size for smaller screens */
+@media (max-width: 768px) {
+    .text-overlay {
+        font-size: 6vw;
+    }
+
+    .navbar-brand b {
+        font-size: 1.25rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem !important;
+    }
+}
+
+.course-box {
+    padding: 40px 10px;
+    height: 220px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.course-box:hover {
+    background-color: rgb(61, 204, 251) !important
+}
+
+.pricing-box {
+    background-color: #f9f9f9;
+    padding: 10px 10px;
+    height: 420px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-box:hover {
+    background-color: rgb(61, 204, 251) !important
+}
+
+
+
+.information-contactUs {
+    background-color: black;
+    color: white;
+    height: 650px;
+}
+
+
+
+.contact-form {
+    max-width: 600px;
+    margin-top:30px;
+    background:gray;
+    height: 500px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: white;
+}
+    
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 120px;
+}
+    
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {  
+    background-color: #218838;
+}
+
+
+
+footer { background-color: #0f2027; color: white; text-align: center; padding: 20px 10px; font-size: 16px; 
+        margin-top: 0px; border-top: 1px solid rgba(255, 255, 255, 0.2);font-family: Arial, sans-serif;}
